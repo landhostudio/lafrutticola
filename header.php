@@ -16,6 +16,7 @@
           <img src="<?php bloginfo('template_url'); ?>/dist/img/logo.png" alt="">
         </a>
       </h1>
+      <div class="container">
 
       <?php if (has_nav_menu('menu')): ?>
         <div class="header__toggle">
@@ -40,4 +41,5 @@
           </ul>
         </nav>
       <?php endif; ?>
+      </div>
     </header>
