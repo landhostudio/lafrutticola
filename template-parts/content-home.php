@@ -22,14 +22,11 @@
         <?php endif; ?>
         
         <?php
-          $page_link_1 = get_field('home_headings_btn_1', false, false);
-          $page_link_2 = get_field('home_headings_btn_2', false, false);
-
-          if ($page_link_1 && $page_link_2):
+          $page_link_btn = get_field('home_headings_btn', false, false);
+          if ($page_link_btn):
         ?>
           <div class="heading__btn">
-            <a href="<?php echo get_the_permalink($page_link_1); ?>" rel="bookmark" class="btn"><?php echo get_the_title($page_link_1); ?></a>
-            <a href="<?php echo get_the_permalink($page_link_2); ?>" rel="bookmark" class="btn"><?php echo get_the_title($page_link_2); ?></a>
+            <a href="<?php echo get_the_permalink($page_link_btn); ?>" rel="bookmark" class="btn"><?php echo get_the_title($page_link_btn); ?></a>
           </div>
         <?php endif; ?>
       </div>
