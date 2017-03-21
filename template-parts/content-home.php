@@ -10,7 +10,7 @@
     </div>
   <?php endif; ?>
 
-  <?php if (get_field('home_headings_title') || get_field('home_headings_text') || get_field('home_headings_btn_1') || get_field('home_headings_btn_2')): ?>
+  <?php if (get_field('home_headings_title') || get_field('home_headings_text') || get_field('home_headings_btn')): ?>
     <div class="heading">
       <div class="container">
         <?php if (get_field('home_headings_title')): ?>
