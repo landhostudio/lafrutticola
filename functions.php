@@ -35,6 +35,14 @@
       
       get_template_part('inc/soil');
       
+      // Remove WPML front-end assets ------------------------------------------
+
+      define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
+      define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
+      define('ICL_DONT_LOAD_LANGUAGES_JS', true);
+      define('ICL_DONT_PROMOTE', true);
+      remove_action('wp_head', array($sitepress, 'meta_generator_tag'));
+
     }
 
   }
