@@ -43,5 +43,29 @@
           </nav>
         <?php endif; ?>
 
+        <?php
+          $languages = icl_get_languages('skip_missing=0');
+          if (!empty($languages)):
+        ?>
+          <div class="header__languages">
+            <button type="button" class="btn" aria-haspopup="true" aria-expanded="false">
+              <?php foreach($languages as $language): ?>
+                <?php if ($language['active']): ?>
+                  <?php echo $language['native_name']; ?>
+                <?php endif; ?>
+              <?php endforeach; ?>
+              <span class="button__caret" aria-hidden="true"></span>
+            </button>
+            <ul class="header__languages-list" aria-labelledby="<?php esc_html_e('Lingue', 'lafrutticola'); ?>">
+              <?php foreach($languages as $language): ?>
+                <?php if (!$language['active']): ?>
+                  <li class="header__languages-item">
+                    <a href="<?php echo $language['url']; ?>" rel="bookmark"><?php echo $language['native_name']; ?></a>
+                  </li>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            </ul>
+          </div>
+        <?php endif; ?>
       </div>
     </header>
