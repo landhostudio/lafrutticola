@@ -1,8 +1,8 @@
 <?php
 
-  if (!function_exists('landhostarter_setup')) {
+  if (!function_exists('lafrutticola_setup')) {
 
-    function landhostarter_setup() {
+    function lafrutticola_setup() {
       
       // Let WordPress manage the document title -------------------------------
 			
@@ -46,4 +46,4 @@
     }
 
   }
-  add_action('after_setup_theme', 'landhostarter_setup');
+  add_action('after_setup_theme', 'lafrutticola_setup');
