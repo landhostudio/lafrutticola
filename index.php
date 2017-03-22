@@ -9,7 +9,7 @@
     <?php elseif (is_tag()): ?>
       <h2><?php single_tag_title(); ?></h2>
     <?php elseif (is_search()): ?>
-      <h2><?php printf( __( 'Search Results for: %s', 'lafrutticola' ), get_search_query() ); ?></h2>
+      <h2><?php printf( __('Risultati di ricerca per: %s', 'lafrutticola'), get_search_query() ); ?></h2>
     <?php else: ?>
       <h2><?php esc_html_e('News', 'lafrutticola'); ?></h2>
     <?php endif; ?>
