@@ -41,6 +41,7 @@
       define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
       define('ICL_DONT_LOAD_LANGUAGES_JS', true);
       define('ICL_DONT_PROMOTE', true);
+      global $sitepress;
       remove_action('wp_head', array($sitepress, 'meta_generator_tag'));
 
     }
