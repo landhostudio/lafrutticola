@@ -34,7 +34,7 @@
           <nav role="navigation" class="header__navigation">
             <h2 class="hidden"><?php esc_html_e('Menu', 'lafrutticola'); ?></h2>
 
-            <ul>
+            <ul class="header__navigation-list">
               <?php wp_nav_menu(array(
                 'theme_location' => 'menu',
                 'items_wrap' => '%3$s'
