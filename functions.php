@@ -35,6 +35,10 @@
       
       get_template_part('inc/soil');
       
+      // Enabled Custom Post Type ----------------------------------------------
+
+      get_template_part('inc/cpt');
+
       // Remove WPML front-end assets ------------------------------------------
 
       define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
