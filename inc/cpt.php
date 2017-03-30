@@ -54,7 +54,7 @@ function cptui_register_my_cpts_prodotto() {
 		"query_var" => true,
 		"menu_position" => 20,
 		"menu_icon" => "dashicons-cart",
-		"supports" => array( "title", "thumbnail" ),
+		"supports" => array( "title", "editor", "thumbnail" ),
 	);
 
 	register_post_type( "prodotto", $args );
