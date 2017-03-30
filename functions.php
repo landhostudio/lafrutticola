@@ -44,6 +44,10 @@
 
       get_template_part('inc/cpt');
 
+      // Advanced Custom Fields ------------------------------------------------
+
+      get_template_part('inc/acf');
+
       // Remove WPML front-end assets ------------------------------------------
 
       define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
