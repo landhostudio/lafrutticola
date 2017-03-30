@@ -1,6 +1,17 @@
     <footer role="contentinfo" class="footer">
       <div class="container">
-        <p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> – <?php bloginfo('description'); ?>.</p>
+
+        <?php if (get_field('footer_text', options)): ?>
+          <div class="footer__legal">
+            <?php the_field('footer_text', options); ?>
+            <button type="button" name="button"></button>
+          </div>
+        <?php endif; ?>
+
+        <div class="footer__copy">
+          <p>&copy; <span itemprop="copyrightYear"><?php echo date('Y'); ?></span> <span itemprop="copyrightHolder"><?php bloginfo('name'); ?></span> – <?php bloginfo('description'); ?>.</p>
+        </div>
+        
       </div>
     </footer>
 
