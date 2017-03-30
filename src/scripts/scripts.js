@@ -7,6 +7,9 @@
       initGoogleMaps();
     }
     initSort();
+    if ($('.cookies').length) {
+      initCookies();
+    }
     initLog();
   };
 
@@ -319,8 +322,27 @@
     });
   };
 
-  function init() {
+  function initCookies() {
     
+    var cookies = Cookies.get('lafrutticola--cookies-accepted');
+
+    if (cookies == 1) {
+
+      $('.cookies').removeClass('cookies--not-accepted');
+
+    } else {
+
+      Cookies.set('lafrutticola--cookies-accepted', '0', {expires: 365});
+
+      $('.cookies').addClass('cookies--not-accepted');
+
+      $('.cookies .btn--active').click(function(event) {
+        $('.cookies').removeClass('cookies--not-accepted');
+        Cookies.set('lafrutticola--cookies-accepted', '1', {expires: 365});
+      });
+
+    };
+
   };
 
   function initLog() {
