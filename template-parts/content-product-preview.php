@@ -9,7 +9,7 @@
       $product_count = count($product_terms);
       if ($product_count > 0):
     ?>
-      <ul class="categories">
+      <ul class="inline-list">
         <?php foreach ($product_terms as $product_term): ?>
           <li><?php echo  $product_term->name; ?></li>
         <?php endforeach; ?>

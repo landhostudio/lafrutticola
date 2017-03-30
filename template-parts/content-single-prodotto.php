@@ -19,7 +19,7 @@
         $product_count = count($product_terms);
         if ($product_count > 0):
       ?>
-        <ul>
+        <ul class="inline-list">
           <?php foreach ($product_terms as $product_term): ?>
             <li><?php echo $product_term->name; ?></li>
           <?php endforeach; ?>
@@ -30,9 +30,7 @@
 
   <div class="body">
     <div class="container">
-      <div class="body__item">
-        <?php the_content(); ?>
-      </div>
+      <?php the_content(); ?>
     </div>
   </div>
 </article>

@@ -1,5 +1,4 @@
 <article class="single">
-
   <?php if (has_post_thumbnail()): ?>
     <div class="hero">
       <div class="hero__container">
@@ -18,9 +17,7 @@
 
   <div class="body">
     <div class="container">
-      <div class="body__item">
-        <?php the_content(); ?>
-      </div>
+      <?php the_content(); ?>
     </div>
   </div>
 
