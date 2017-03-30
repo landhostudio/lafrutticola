@@ -86,7 +86,7 @@ gulp.task('fonts', function() {
 
 gulp.task('watch', function() {
   browserSync.init({
-    files: ['{template-pages,templates-parts,inc}/**/*.php', '*.php'],
+    files: ['{template-pages,template-parts,inc}/**/*.php', '*.php'],
     proxy: url,
     notify: false,
     port: 8003,
