@@ -4,7 +4,6 @@
         <?php if (get_field('footer_text', options)): ?>
           <div class="footer__legal">
             <?php the_field('footer_text', options); ?>
-            <button type="button" name="button"></button>
           </div>
         <?php endif; ?>
 
