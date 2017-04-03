@@ -13,3 +13,30 @@
 
   @include media($screen-md-min)
     max-width: $screen-md-min
+.btn
+  display: inline-block
+  font-size: em-calc(16)
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  padding: 0 em-calc(12)
+  background-color: rgba(0,0,0,0)
+  background-image: none
+  color: $color-3
+  border: em-calc(1) solid $color-3
+  border-radius: 0
+  vertical-align: middle
+  cursor: pointer
+  user-select: none
+  touch-action: manipulation
+  text-decoration: none
+  border-radius: em-calc(3)
+  height: 40px
+  line-height: 40px
+
+  // STATES --------------------------------------------------------------------
+  &:hover,
+  &--active
+    color: $color-2
+    border-color: $color-3
+    background-color: $color-3
