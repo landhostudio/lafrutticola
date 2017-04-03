@@ -1,0 +1,83 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  background-color: $color-2
+  box-shadow: 0 0 em-calc(16) rgba($color-1, 0.12)
+  z-index: 98
+
+  + *
+    margin-top: em-calc(90)
+
+    @include media($screen-sm-min)
+      margin-top: em-calc(110)
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: center
+    padding-top: $padding
+    padding-bottom: $padding
+
+  &__title
+    font-size: em-calc(16)
+    font-weight: normal
+    line-height: 0
+    margin-top: 0
+    margin-bottom: 0
+
+    img
+      max-width: em-calc(150)
+      @include media($screen-sm-min)
+        max-width: em-calc(200)
+
+  &__toggle
+    @include media(max-width $screen-sm-max)
+      order: 2
+    @include media($screen-sm-min)
+      display: none
+
+  &__navigation
+    @include media(max-width $screen-sm-max)
+      order: 3
+      flex-basis: 100%
+      height: 0
+      opacity: 0
+      overflow: hidden
+      visibility: hidden
+      .header--active &
+        opacity: 1
+        visibility: visible
+        height: auto
+    @include media($screen-sm-min)
+      flex-grow: 1
+      text-align: right
+      margin-right: em-calc(16)
+
+    .no-list
+      @include media(max-width $screen-sm-max)
+        margin-top: em-calc(16)
+
+    li
+      @include media(max-width $screen-sm-max)
+        display: block
+        border-top: em-calc(1) solid lighten($color-3, 47.5%)
+      @include media($screen-sm-min)
+        display: inline-block
+      a
+        text-decoration: none
+        padding: em-calc(10) em-calc(12)
+        @include media(max-width $screen-sm-max)
+          display: block
+
+      &.active
+        a
+          color: $color-3
+  &__languages
+    @include media(max-width $screen-sm-max)
+      order: 1
+      flex-grow: 1
+      text-align: right
+      margin-right: em-calc(16)

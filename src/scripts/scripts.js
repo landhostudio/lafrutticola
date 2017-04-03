@@ -3,6 +3,7 @@
   'use strict';
 
   var init = function() {
+    initHeader();
     if ($('.map').length) {
       initGoogleMaps();
     }
@@ -11,6 +12,12 @@
       initCookies();
     }
     initLog();
+  };
+
+  function initHeader() {
+    $('.header__toggle .btn--toggle').click(function() {
+      $('.header').toggleClass('header--active');
+    });
   };
 
   function initGoogleMaps() {
