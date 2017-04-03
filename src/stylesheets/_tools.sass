@@ -13,6 +13,7 @@
 
   @include media($screen-md-min)
     max-width: $screen-md-min
+
 .btn
   display: inline-block
   font-size: em-calc(16)
@@ -40,3 +41,70 @@
     color: $color-2
     border-color: $color-3
     background-color: $color-3
+
+  // GROUP ---------------------------------------------------------------------
+  &-group
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    text-align: left
+
+  // TOGGLE --------------------------------------------------------------------
+  &--toggle
+    padding: em-calc(14) em-calc(12)
+
+    &:hover
+      .btn__bar
+        background-color: $color-2
+
+  &__bar
+    display: block
+    background-color: $color-3
+    height: em-calc(1)
+    width: em-calc(22)
+
+    + .btn__bar
+      margin-top: em-calc(4)
+
+  // DROPDOWN ------------------------------------------------------------------
+  &--dropdown
+    &--active
+  &__caret
+    display: inline-block
+    width: 0
+    height: 0
+    margin-left: em-calc(2)
+    vertical-align: middle
+    border-top: em-calc(4) dashed
+    border-right: em-calc(4) solid rgba(0, 0, 0, 0)
+    border-left: em-calc(4) solid rgba(0, 0, 0, 0)
+  
+  &__dropdown
+    display: none
+    position: absolute
+    top: 100%
+    right: 0
+    z-index: 99
+    float: left
+    width: 100%
+    margin: em-calc(2) 0 0
+    padding: 0
+    list-style: none
+    background-color: $color-2
+    background-clip: padding-box
+    border: 1px solid $color-3
+    border-radius: 4px
+    box-shadow: 0 em-calc(8) em-calc(16) rgba($color-1, 0.125)
+    cursor: pointer
+
+    a
+      color: $color-3
+      display: block
+      padding: em-calc(8) em-calc(12)
+      clear: both
+      white-space: nowrap
+      text-decoration: none
+
+    &--active
+      display: block
+
