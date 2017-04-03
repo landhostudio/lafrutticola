@@ -1,0 +1,26 @@
+.cookies
+  display: none
+
+  &--not-accepted
+    display: block
+    position: fixed
+    left: 0
+    bottom: 0
+    width: 100%
+    background-color: $color-3
+    color: $color-2
+    padding-bottom: em-calc(16)
+    z-index: 1
+    box-shadow: 0 0 em-calc(16) rgba($color-1, 0.12)
+    text-align: center
+
+    p
+      font-size: em-calc(14)
+
+    .btn
+      color: $color-2
+      border-color: $color-2
+      &:hover,
+      &--active
+        background-color: $color-2
+        color: $color-3
