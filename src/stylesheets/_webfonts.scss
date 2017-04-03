@@ -1,32 +1,27 @@
-// Body ------------------------------------------------------------------------
-
-/* roboto-regular - latin */
+/* pt-serif-regular - latin_latin-ext */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'PT Serif';
   font-style: normal;
   font-weight: 400;
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('../webfonts/roboto-v15-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../webfonts/roboto-v15-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('PT Serif'), local('PTSerif-Regular'),
+       url('../webfonts/pt-serif-v8-latin_latin-ext-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../webfonts/pt-serif-v8-latin_latin-ext-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* roboto-700 - latin */
+/* pt-serif-700 - latin_latin-ext */
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'PT Serif';
   font-style: normal;
   font-weight: 700;
-  src: local('Roboto Bold'), local('Roboto-Bold'),
-       url('../webfonts/roboto-v15-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../webfonts/roboto-v15-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  src: local('PT Serif Bold'), local('PTSerif-Bold'),
+       url('../webfonts/pt-serif-v8-latin_latin-ext-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../webfonts/pt-serif-v8-latin_latin-ext-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-
-// Headings --------------------------------------------------------------------
-
-/* roboto-condensed-700 - latin */
+/* pt-serif-italic - latin_latin-ext */
 @font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Roboto Condensed Bold'), local('RobotoCondensed-Bold'),
-       url('../webfonts/roboto-condensed-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('../webfonts/roboto-condensed-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  src: local('PT Serif Italic'), local('PTSerif-Italic'),
+       url('../webfonts/pt-serif-v8-latin_latin-ext-italic.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('../webfonts/pt-serif-v8-latin_latin-ext-italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
