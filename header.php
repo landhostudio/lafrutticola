@@ -21,11 +21,11 @@
 
         <?php if (has_nav_menu('menu')): ?>
           <div class="header__toggle">
-            <button type="button" class="toggle" aria-label="<?php esc_html_e('Menu', 'lafrutticola'); ?>">
+            <button type="button" class="btn btn--toggle" aria-label="<?php esc_html_e('Menu', 'lafrutticola'); ?>">
               <span class="hidden"><?php esc_html_e('Menu', 'lafrutticola'); ?></span>
-              <span class="toggle__bar" aria-hidden="true"></span>
-              <span class="toggle__bar" aria-hidden="true"></span>
-              <span class="toggle__bar" aria-hidden="true"></span>
+              <span class="btn__bar" aria-hidden="true"></span>
+              <span class="btn__bar" aria-hidden="true"></span>
+              <span class="btn__bar" aria-hidden="true"></span>
             </button>
           </div>
         <?php endif; ?>
@@ -34,7 +34,7 @@
           <nav role="navigation" class="header__navigation">
             <h2 class="hidden"><?php esc_html_e('Menu', 'lafrutticola'); ?></h2>
 
-            <ul class="header__navigation-list">
+            <ul class="no-list">
               <?php wp_nav_menu(array(
                 'theme_location' => 'menu',
                 'items_wrap' => '%3$s'
@@ -48,23 +48,23 @@
           if (!empty($languages)):
         ?>
           <div class="header__languages">
-            <button type="button" class="btn" aria-haspopup="true" aria-expanded="false">
-              <?php foreach($languages as $language): ?>
-                <?php if ($language['active']): ?>
-                  <?php echo $language['native_name']; ?>
-                <?php endif; ?>
-              <?php endforeach; ?>
-              <span class="button__caret" aria-hidden="true"></span>
-            </button>
-            <ul class="header__languages-list" aria-labelledby="<?php esc_html_e('Lingue', 'lafrutticola'); ?>">
-              <?php foreach($languages as $language): ?>
-                <?php if (!$language['active']): ?>
-                  <li class="header__languages-item">
-                    <a href="<?php echo $language['url']; ?>" rel="bookmark"><?php echo $language['native_name']; ?></a>
-                  </li>
-                <?php endif; ?>
-              <?php endforeach; ?>
-            </ul>
+            <div class="btn-group">
+              <button type="button" class="btn btn--dropdown">
+                <?php foreach($languages as $language): ?>
+                  <?php if ($language['active']): ?>
+                    <?php echo $language['native_name']; ?>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+                <span class="btn__caret" aria-hidden="true"></span>
+              </button>
+              <ul class="btn__dropdown" aria-labelledby="<?php esc_html_e('Lingue', 'lafrutticola'); ?>">
+                <?php foreach($languages as $language): ?>
+                  <?php if (!$language['active']): ?>
+                    <li><a href="<?php echo $language['url']; ?>" rel="bookmark"><?php echo $language['native_name']; ?></a></li>
+                  <?php endif; ?>
+                <?php endforeach; ?>
+              </ul>
+            </div>
           </div>
         <?php endif; ?>
       </div>
