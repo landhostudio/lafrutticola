@@ -29,7 +29,9 @@
     margin-bottom: 0
 
     img
-      max-width: em-calc(150)
+      max-width: em-calc(100)
+      @include media(em-calc(360))
+        max-width: em-calc(150)
       @include media($screen-sm-min)
         max-width: em-calc(200)
 
