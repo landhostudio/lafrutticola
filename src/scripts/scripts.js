@@ -4,6 +4,7 @@
 
   var init = function() {
     initHeader();
+    initDropdown();
     if ($('.map').length) {
       initGoogleMaps();
     }
@@ -17,6 +18,20 @@
   function initHeader() {
     $('.header__toggle .btn--toggle').click(function() {
       $('.header').toggleClass('header--active');
+    });
+  };
+
+  function initDropdown() {
+    $('.btn--dropdown').click(function() {
+      $(this).toggleClass('btn--active');
+      $('.btn__dropdown').toggleClass('btn__dropdown--active');
+    });
+
+    $(document).click(function(event) {
+      if (event.target.nodeName.toLowerCase() != 'button') {
+        $('.btn__dropdown').removeClass('btn__dropdown--active');
+        $('.btn--dropdown').removeClass('btn--active');
+      }
     });
   };
 
