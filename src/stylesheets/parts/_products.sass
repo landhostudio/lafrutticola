@@ -1,0 +1,55 @@
+.products
+  &__filter
+    .btn
+      @include media(max-width $screen-sm-max)
+        display: block
+        width: 100%
+        margin-bottom: em-calc(8)
+      @include media($screen-sm-min)
+      &-group
+        @include media(max-width $screen-sm-max)
+          width: 100%
+          margin-bottom: em-calc(8)
+        @include media($screen-sm-min)
+          margin-bottom: em-calc(16)
+  &__items
+    display: flex
+    flex-wrap: wrap
+    margin-right: - ($padding / 2)
+    margin-left: - ($padding / 2)
+    @include media($screen-sm-min)
+      margin-right: - $padding
+      margin-left: - $padding
+  &__item
+    flex-basis: 50%
+    padding: ($padding / 2) ($padding / 2) $padding * 1.5
+    @include media($screen-sm-min)
+      padding: $padding $padding $padding * 1.5
+    @include media($screen-md-min)
+      flex-basis: 25%
+    &--hidden
+      position: absolute
+      left: -999em
+    a
+      text-decoration: none
+      &:hover
+        img
+          opacity: 0.75
+        h3
+          color: $color-3
+    .no-list
+      li
+        font-size: em-calc(10)
+        background-color: $color-3
+        color: $color-2
+        text-transform: uppercase
+        padding: em-calc(3) em-calc(12) em-calc(2)
+        letter-spacing: em-calc(1)
+        font-family: sans-serif
+        border-radius: em-calc(3)
+    img
+      display: block
+      width: 100%
+      border-radius: em-calc(3)
+    h3
+      margin-bottom: em-calc(8)

@@ -2,14 +2,14 @@
   <a href="<?php the_permalink(); ?>" rel="bookmark">
     <?php the_post_thumbnail('thumbnail'); ?>
 
-    <h2><?php the_title(); ?></h2>
+    <h3><?php the_title(); ?></h3>
 
     <?php
       $product_terms = wp_get_object_terms($post->ID, 'tipologia');
       $product_count = count($product_terms);
       if ($product_count > 0):
     ?>
-      <ul class="inline-list">
+      <ul class="no-list">
         <?php foreach ($product_terms as $product_term): ?>
           <li><?php echo  $product_term->name; ?></li>
         <?php endforeach; ?>
