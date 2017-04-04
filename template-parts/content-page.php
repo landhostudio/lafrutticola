@@ -11,7 +11,17 @@
 
   <div class="heading">
     <div class="container">
-      <h2 itemprop="headline"><?php the_title(); ?></h2>
+
+      <?php if (get_field('page_headings_title')): ?>
+        <h2 itemprop="headline"><?php the_field('page_headings_title'); ?></h2>
+      <?php else: ?>
+        <h2 itemprop="headline"><?php the_title(); ?></h2>
+      <?php endif; ?>
+
+      <?php if (get_field('page_headings_text')): ?>
+        <p><?php the_field('page_headings_text'); ?></p>
+      <?php endif; ?>
+      
     </div>
   </div>
 
