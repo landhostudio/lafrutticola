@@ -287,7 +287,7 @@
     	
       	// set center of map
   	    map.setCenter(bounds.getCenter());
-  	    map.setZoom(16);
+  	    map.setZoom(9);
 
       } else {
 

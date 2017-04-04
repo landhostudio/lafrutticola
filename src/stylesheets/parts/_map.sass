@@ -1,0 +1,12 @@
+.map
+  &__object
+    position: relative
+    padding-bottom: per-width(16,9)
+    @include media($screen-sm-min)
+      padding-bottom: (per-width(16,9) / 1.5)
+  &__canvas
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
