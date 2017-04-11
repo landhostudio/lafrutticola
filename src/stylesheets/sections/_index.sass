@@ -1,0 +1,36 @@
+.index
+  &__items
+    display: flex
+    flex-wrap: wrap
+    padding-top: $padding / 2
+    margin-right: - ($padding / 2)
+    margin-left: - ($padding / 2)
+    @include media($screen-sm-min)
+      padding-top: $padding
+      margin-right: - $padding
+      margin-left: - $padding
+  &__item
+    flex-basis: 50%
+    padding: ($padding / 2) ($padding / 2) $padding * 1.5
+    @include media($screen-sm-min)
+      padding: $padding $padding $padding * 1.5
+    @include media($screen-md-min)
+      flex-basis: 25%
+
+    a
+      text-decoration: none
+      &:hover
+        img
+          opacity: 0.75
+        h3
+          color: $color-3
+
+    img
+      display: block
+      width: 100%
+      border-radius: em-calc(3)
+    h3
+      margin-bottom: em-calc(8)
+    .date
+      color: lighten($color-1, 50%)
+      margin-top: 0
