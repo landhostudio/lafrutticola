@@ -117,6 +117,22 @@
 .no-list
   margin: 0
   padding: 0
-  
+
   li
     display: inline-block
+
+  &--tag
+    li
+      font-size: em-calc(10)
+      background-color: $color-3
+      color: $color-2
+      text-transform: uppercase
+      padding: em-calc(3) em-calc(12) em-calc(2)
+      letter-spacing: em-calc(1)
+      font-family: sans-serif
+      border-radius: em-calc(3)
+
+    &-alternative
+      li
+        background-color: $color-2
+        color: $color-3
