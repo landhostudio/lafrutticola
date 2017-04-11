@@ -60,6 +60,14 @@
       define('ICL_DONT_PROMOTE', true);
       global $sitepress;
       remove_action('wp_head', array($sitepress, 'meta_generator_tag'));
+      
+      // Tools -----------------------------------------------------------------
+
+      function get_url_by_slug($slug) {
+        $page_url_id = get_page_by_path($slug);
+        $page_url_link = get_permalink($page_url_id);
+        return $page_url_link;
+      }
 
     }
 

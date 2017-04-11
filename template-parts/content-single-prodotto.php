@@ -31,7 +31,7 @@
   <div class="body">
     <div class="container">
       <?php the_content(); ?>
-      <a href="../" rel="bookmark" class="btn"><?php esc_html_e('Ritorna ai prodotti', 'lafrutticola'); ?></a>
+      <a href="<?php echo get_url_by_slug('prodotti'); ?>" rel="bookmark" class="btn"><?php esc_html_e('Ritorna ai prodotti', 'lafrutticola'); ?></a>
     </div>
   </div>
 </article>
