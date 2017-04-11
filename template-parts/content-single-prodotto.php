@@ -19,7 +19,7 @@
         $product_count = count($product_terms);
         if ($product_count > 0):
       ?>
-        <ul class="inline-list">
+        <ul class="no-list no-list--tag no-list--tag-alternative">
           <?php foreach ($product_terms as $product_term): ?>
             <li><?php echo $product_term->name; ?></li>
           <?php endforeach; ?>
@@ -31,6 +31,7 @@
   <div class="body">
     <div class="container">
       <?php the_content(); ?>
+      <a href="../" rel="bookmark" class="btn"><?php esc_html_e('Ritorna ai prodotti', 'lafrutticola'); ?></a>
     </div>
   </div>
 </article>
