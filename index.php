@@ -28,12 +28,23 @@
 
     <div class="body">
       <div class="container">
-        <?php while (have_posts()): the_post(); ?>
-          <?php get_template_part('template-parts/content', 'preview'); ?>
-        <?php endwhile; ?>
+        <div class="index__items">
+          <?php while (have_posts()): the_post(); ?>
+            <?php get_template_part('template-parts/content', 'preview'); ?>
+          <?php endwhile; ?>
+        </div>
       </div>
     </div>
 
+    <div class="container">
+      <?php
+        the_posts_navigation( array(
+          'screen_reader_text' => __('Navigazione news', 'lafrutticola'),
+          'prev_text' => '<span class="btn">&laquo; ' . __( 'News precedenti', 'lafrutticola' ) .'</span>',
+          'next_text' => '<span class="btn">' . __( 'News recenti', 'lafrutticola' ) .' &raquo;</span>'
+        ));
+      ?>
+    </div>
   </section>
         
 <?php else: ?>
