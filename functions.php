@@ -9,8 +9,12 @@
       add_theme_support('title-tag');
 
 			// Enable support for Post Thumbnails on posts and pages -----------------
-			
+
       add_theme_support('post-thumbnails');
+      the_post_thumbnail('thumbnail');
+      set_post_thumbnail_size(640, 640, array('center', 'center'));
+      the_post_thumbnail('medium', 960, 540, array('center', 'center'));
+      the_post_thumbnail('large', 1920, 1080, array('center', 'center'));
 
 			// Enables dynamic navigation --------------------------------------------
 
