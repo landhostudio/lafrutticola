@@ -41,11 +41,11 @@
 
       var $markers = $el.find('.map__marker');
 
-      var color1 = '#212121',
-          color2 = '#cf5425',
+      var color1 = '#222222',
+          color2 = '#7f7d32',
           color3 = '#fbfbfb',
           color4 = '#fbfbfb',
-          color5 = '#f9b89f';
+          color5 = '#bcbb94';
 
     	var args = {
         scrollwheel       : false,
