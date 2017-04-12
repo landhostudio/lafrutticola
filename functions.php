@@ -69,6 +69,10 @@
         return $page_url_link;
       }
 
+      // Multilanguage ---------------------------------------------------------
+
+      load_theme_textdomain('lafrutticola', get_template_directory() . '/languages');
+
     }
 
   }
