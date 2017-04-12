@@ -72,6 +72,10 @@
       // Multilanguage ---------------------------------------------------------
 
       load_theme_textdomain('lafrutticola', get_template_directory() . '/languages');
+      
+      // Custom dashboard message ----------------------------------------------
+      
+      get_template_part('inc/dashboard-custom-widget');
 
     }
 
