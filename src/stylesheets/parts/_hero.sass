@@ -5,6 +5,9 @@
     width: 100%
     padding-bottom: per-width(16,9)
 
+    @include media($screen-md-min)
+      padding-bottom: (per-width(16,9) / 1.5)
+
   &__image
     position: absolute
     top: 0
